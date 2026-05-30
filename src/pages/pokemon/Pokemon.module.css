@@ -1,0 +1,392 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 93vh;
+  background-color: var(--mainBlue-500);
+  padding: 2rem 0 4rem;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 93vh;
+  background-color: var(--mainBlue-500);
+}
+.loadingText {
+  font-family: var(--font-montserrat);
+  color: var(--textColor);
+  font-size: 1rem;
+}
+
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  border: 1.5px solid var(--borderRed-500);
+  background-color: transparent;
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.backButton:hover {
+  background-color: var(--borderRed-400);
+}
+
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 70%;
+}
+
+.heroCard,
+.sectionCard,
+.singleCard {
+  background-color: var(--mainBlue-600);
+  border: 1px solid var(--strokeColor);
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+
+.heroCard::-webkit-scrollbar,
+.sectionCard::-webkit-scrollbar,
+.singleCard::-webkit-scrollbar {
+  display: none;
+}
+
+.heroCard {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.singleCard {
+  width: 70%;
+}
+
+
+.heroImageBox {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+}
+.heroImage {
+  width: 200px;
+  height: 200px;
+  image-rendering: pixelated;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.heroId {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: var(--textColor);
+}
+
+.heroName {
+  font-family: var(--font-jersey10);
+  font-size: 2.5rem;
+  color: var(--foreground);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.typeBadges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.typeBadge {
+  font-family: var(--font-montserrat);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.flavorBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+.flavorText {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: var(--textColor);
+}
+
+.metaRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.metaLabel {
+  font-family: var(--font-montserrat);
+  font-size: 0.7rem;
+  color: var(--textColor);
+}
+.metaValue {
+  font-family: var(--font-montserrat);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.sectionHeaderSpaced {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.sectionTitle {
+  font-family: var(--font-jersey25);
+  font-size: 1.1rem;
+  color: var(--foreground);
+}
+
+.statsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.statRow {
+  display: grid;
+  grid-template-columns: 90px 1fr 35px;
+  align-items: center;
+  gap: 0.75rem;
+}
+.statLabel {
+  font-family: var(--font-montserrat);
+  font-size: 0.75rem;
+  color: var(--textColor);
+}
+.barBg {
+  height: 8px;
+  background-color: var(--mainBlue-400);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.statNum {
+  font-family: var(--font-montserrat);
+  font-size: 0.75rem;
+  color: var(--foreground);
+  text-align: right;
+}
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--strokeColor);
+}
+.totalLabel {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+.totalValue {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+
+.infoTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.infoRow {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+.infoLabel {
+  font-family: var(--font-montserrat);
+  font-size: 0.75rem;
+  color: var(--textColor);
+}
+.infoValue {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: var(--foreground);
+}
+
+.evoChain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+.evoEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.evoArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.evoLevel {
+  font-family: var(--font-montserrat);
+  font-size: 0.65rem;
+  color: var(--textColor);
+  white-space: nowrap;
+}
+.evoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--strokeColor);
+  border-radius: 8px;
+  background-color: var(--mainBlue-400);
+  cursor: pointer;
+  gap: 0.25rem;
+  min-width: 100px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.evoCard:hover {
+  border-color: var(--borderRed-500);
+  transform: translateY(-2px);
+}
+.evoCardActive {
+  border-color: var(--borderRed-400);
+}
+.evoImage {
+  width: 72px;
+  height: 72px;
+  image-rendering: pixelated;
+}
+.evoName {
+  font-family: var(--font-montserrat);
+  font-size: 0.75rem;
+  color: var(--foreground);
+  font-weight: 600;
+}
+.evoBadges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.typeBadgeSmall {
+  font-family: var(--font-montserrat);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Moves ─── */
+.movesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.moveRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--strokeColor);
+  border-radius: 5px;
+  background-color: var(--mainBlue-400);
+}
+.moveName {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: var(--foreground);
+}
+.moveBadge {
+  font-family: var(--font-montserrat);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Sprites ─── */
+.spritesRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-end;
+}
+.spriteItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.spriteImg {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}
+.spriteLabel {
+  font-family: var(--font-montserrat);
+  font-size: 0.65rem;
+  color: var(--textColor);
+  text-align: center;
+}

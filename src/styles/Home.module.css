@@ -1,0 +1,97 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--mainBlue-500);
+  gap: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+
+  & .title {
+    font-size: 3rem;
+    color: var(--foreground);
+    font-family: var(--font-jersey10);
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -1rem;
+  }
+
+  & .subtitle {
+    font-size: 1.5rem;
+    color: var(--borderRed-400);
+    font-family: var(--font-jersey10);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  & .highlight {
+    color: var(--borderRed-500);
+  }
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--textColor);
+  font-family: var(--font-montserrat);
+  text-align: center;
+  max-width: 600px;
+  width: 400px;
+}
+
+.rowCard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--strokeColor);
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+  width: 300px;
+
+  & .cardTitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  & .cardDescription {
+    font-size: 0.875rem;
+    color: var(--textColor);
+  }
+}
+
+.buttonContainer{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 0.25rem;
+  background-color: var(--borderRed-500);
+  font-size: 1.85rem;
+  color: var(--foreground);
+  font-family: var(--font-jersey10);
+  cursor: pointer;
+}
